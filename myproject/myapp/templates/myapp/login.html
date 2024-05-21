@@ -7,11 +7,8 @@
     
     <form method="post">
 
-        <!-- used for security -->
         {% csrf_token %}
-        
-        <!-- display all the form fields -->
-        <!-- form is passed from the default LoginView class -->
+
         {{ form }}
         
         <button type="submit"> log in </button>
