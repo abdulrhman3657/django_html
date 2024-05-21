@@ -7,7 +7,6 @@
 
     <p> welcome to the main page </p>
 
-    <!-- display flash(system) message -->
     <div>
         {% if messages %}
 
@@ -41,7 +40,6 @@
 
     <br>
 
-    <!-- display links based on user login -->
     {% if user.is_authenticated %}
         <button onclick="location.href='/new'"> create note </button>
         <button onclick="location.href='/logout'"> log out </button>
@@ -50,7 +48,6 @@
         <button onclick="location.href='/login'"> login here </button>
     {% endif %}
 
-    <!-- <a href="/login">login here</a> -->
     
 </body>
 </html>
