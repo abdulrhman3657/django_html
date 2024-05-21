@@ -5,17 +5,11 @@ from django.contrib import messages
 from django.views.generic import ListView, CreateView, DeleteView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
-# request: ex: GET, POST, ...
-
-# render(): Combine the  template with the given context dictionary then return HttpResponse object with that rendered text
 
 def login(request):
     return render(request, 'myapp/login.html')
 
 
-# check if request is GET or POST
-# if request is POST, validate the data
-# if request is GET, display a blank form
 def register(request):
     if request.method == 'POST':
         # create a new form that contains the post data
