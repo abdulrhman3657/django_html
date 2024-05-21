@@ -6,11 +6,9 @@
 
 <form method="post">
 
-<!-- used for security -->
+
 {% csrf_token %}
 
-<!-- display the note fields -->
-<!-- form is passed from NoteCreateView -->
 {{ form }}
 
 <button type="submit"> create note </button>
