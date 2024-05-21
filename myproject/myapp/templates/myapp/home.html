@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>main page</title>
+</head>
+<body>
+
+    <p> welcome to the main page </p>
+
+    <!-- display flash(system) message -->
+    <div>
+        {% if messages %}
+
+            {% for Message in messages %}
+
+                <h1> {{ Message }} </h1>
+                
+            {% endfor %}
+
+        {% endif%}
+    </div>
+
+    {% for Note in notesList  %}
+    
+    <fieldset>
+    <div>
+    <h1> {{Note.noteName}} </h1>
+     <div> <p1> {{Note.noteContent}} </p1> </div>
+    <p1> on {{Note.date_created}} by {{Note.author}} </p1>
+    </div>
+    
+    
+    <button onclick="location.href='update/{{Note.id}}'"> update note </button>
+    <button onclick="location.href='delete/{{Note.id}}'"> delete note </button>
+
+    </fieldset>
+
+    <br>
+
+    {% endfor %}
+
+    <br>
+
+    <!-- display links based on user login -->
+    {% if user.is_authenticated %}
+        <button onclick="location.href='/new'"> create note </button>
+        <button onclick="location.href='/logout'"> log out </button>
+    {% else %}
+        <button onclick="location.href='/register'"> register here </button>
+        <button onclick="location.href='/login'"> login here </button>
+    {% endif %}
+
+    <!-- <a href="/login">login here</a> -->
+    
+</body>
+</html>

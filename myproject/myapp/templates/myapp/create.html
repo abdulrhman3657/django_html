@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title>create and update note</title>
+</head>
+<body>
+
+<form method="post">
+
+<!-- used for security -->
+{% csrf_token %}
+
+<!-- display the note fields -->
+<!-- form is passed from NoteCreateView -->
+{{ form }}
+
+<button type="submit"> create note </button>
+    
+</form>
+
+</body>
+</html>

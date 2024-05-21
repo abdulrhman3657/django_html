@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <title>register page</title>
+</head>
+<body>
+
+<form method="post">
+
+<!-- used for security -->
+{% csrf_token %}
+
+<h2> do you want to delete {{ object.noteName }} ?</h2>
+
+<button type="submit"> yes </button>
+    
+</form>
+
+</body>
+</html>

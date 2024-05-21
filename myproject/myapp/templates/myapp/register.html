@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <title>register page</title>
+</head>
+<body>
+
+<form method="post">
+
+<!-- used for security -->
+{% csrf_token %}
+
+<!-- display all the form fields -->
+{{ RegisterForm }}
+
+<button type="submit"> sign up </button>
+    
+</form>
+
+</body>
+</html>
